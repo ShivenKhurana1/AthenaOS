@@ -9,6 +9,6 @@ recipe_install() {
 
   pushd "$src_dir" >/dev/null
   make -j"$(cpu_count)"
-  make PREFIX=/usr DESTDIR="$LFS_ROOT" install
+  make PREFIX="${LFS_ROOT}/usr" install
   popd >/dev/null
 }
