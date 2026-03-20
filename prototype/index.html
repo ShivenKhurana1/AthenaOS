@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AthenaOS Glasskit Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;600&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backdrop">
+      <div class="glow glow--left"></div>
+      <div class="glow glow--right"></div>
+      <div class="grain"></div>
+    </div>
+
+    <div class="desktop">
+      <header class="top-bar glass">
+        <div class="brand">
+          <span class="brand__dot"></span>
+          <span class="brand__name">AthenaOS</span>
+          <nav class="menu">
+            <button class="menu__item is-active">Home</button>
+            <button class="menu__item">Studio</button>
+            <button class="menu__item">Flow</button>
+            <button class="menu__item">Settings</button>
+          </nav>
+        </div>
+
+        <div class="search">
+          <button class="search__pill" data-action="launcher">
+            <span class="search__label">Search or type to launch</span>
+            <span class="search__key">Cmd + K</span>
+          </button>
+        </div>
+
+        <div class="status">
+          <button class="icon-btn" data-action="notifications">Alerts</button>
+          <button class="icon-btn" data-action="control">Control</button>
+          <span class="status__time" data-time>12:45</span>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="rail glass">
+          <div class="rail__profile">
+            <div class="avatar">AO</div>
+            <div>
+              <div class="rail__name">Athena</div>
+              <div class="rail__role">Owner</div>
+            </div>
+          </div>
+
+          <div class="rail__section">
+            <div class="rail__label">Spaces</div>
+            <button class="rail__item is-active">Studio</button>
+            <button class="rail__item">Focus</button>
+            <button class="rail__item">Library</button>
+            <button class="rail__item">Settings</button>
+          </div>
+
+          <div class="rail__section">
+            <div class="rail__label">Pinned</div>
+            <div class="rail__chips">
+              <span class="chip">Design</span>
+              <span class="chip">Code</span>
+              <span class="chip">Media</span>
+            </div>
+          </div>
+
+          <div class="rail__section">
+            <div class="rail__label">Shortcuts</div>
+            <div class="rail__shortcut">
+              <span>Morning Brief</span>
+              <span class="rail__meta">8 new</span>
+            </div>
+            <div class="rail__shortcut">
+              <span>Review Queue</span>
+              <span class="rail__meta">4</span>
+            </div>
+          </div>
+        </aside>
+
+        <section class="canvas">
+          <section class="window glass window--hero" data-window style="--delay: 0ms">
+            <div class="window__bar">
+              <span>Studio</span>
+              <div class="window__dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="window__body">
+              <h2>Focus rooms</h2>
+              <p>Keep your workspace calm with tuned layers and clean glass surfaces.</p>
+              <div class="window__cards">
+                <div class="card">
+                  <div class="card__title">Design</div>
+                  <div class="card__meta">6 boards</div>
+                </div>
+                <div class="card">
+                  <div class="card__title">Development</div>
+                  <div class="card__meta">3 builds</div>
+                </div>
+                <div class="card">
+                  <div class="card__title">Media</div>
+                  <div class="card__meta">14 files</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="canvas__row">
+            <section class="window glass" data-window style="--delay: 120ms">
+              <div class="window__bar">
+                <span>Planner</span>
+                <div class="window__dots">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="window__body">
+                <h2>Clear direction</h2>
+                <p>Track the next steps with gentle emphasis and minimal noise.</p>
+                <div class="window__list">
+                  <div class="list-row">
+                    <span>Finalize glass tokens</span>
+                    <span class="list-meta">Today</span>
+                  </div>
+                  <div class="list-row">
+                    <span>Theme GNOME shell</span>
+                    <span class="list-meta">Tomorrow</span>
+                  </div>
+                  <div class="list-row">
+                    <span>Prototype installer</span>
+                    <span class="list-meta">Fri</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="window glass" data-window style="--delay: 240ms">
+              <div class="window__bar">
+                <span>Settings</span>
+                <div class="window__dots">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="window__body">
+                <h2>Calm controls</h2>
+                <p>Quick toggles and deep settings with clear grouping.</p>
+                <div class="window__toggles">
+                  <button class="toggle is-on">Airlight</button>
+                  <button class="toggle">Handoff</button>
+                  <button class="toggle is-on">Glass depth</button>
+                </div>
+                <div class="window__sliders">
+                  <div class="slider-row">
+                    <span>Brightness</span>
+                    <div class="slider"></div>
+                  </div>
+                  <div class="slider-row">
+                    <span>Accent</span>
+                    <div class="slider slider--warm"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <aside class="widgets">
+          <section class="widget glass">
+            <h3>Focus scene</h3>
+            <p>Reduce noise, soften alerts, and keep glass crisp.</p>
+            <div class="widget__toggles">
+              <button class="toggle is-on">Quiet mode</button>
+              <button class="toggle">Ambient blur</button>
+            </div>
+          </section>
+
+          <section class="widget glass">
+            <h3>Now playing</h3>
+            <div class="media">
+              <div class="media__art"></div>
+              <div>
+                <div class="media__title">Glass Haze</div>
+                <div class="media__meta">Athena Sound</div>
+              </div>
+            </div>
+            <div class="media__controls">
+              <button class="icon-btn">Prev</button>
+              <button class="icon-btn is-primary">Play</button>
+              <button class="icon-btn">Next</button>
+            </div>
+          </section>
+
+          <section class="widget glass">
+            <h3>Calendar</h3>
+            <div class="calendar">
+              <div class="calendar__day is-today">16</div>
+              <div class="calendar__day">17</div>
+              <div class="calendar__day">18</div>
+              <div class="calendar__day">19</div>
+              <div class="calendar__day">20</div>
+              <div class="calendar__day">21</div>
+              <div class="calendar__day">22</div>
+            </div>
+            <div class="calendar__list">
+              <div class="list-row">
+                <span>Design review</span>
+                <span class="list-meta">10:00</span>
+              </div>
+              <div class="list-row">
+                <span>Build sync</span>
+                <span class="list-meta">14:30</span>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </main>
+
+      <footer class="dock glass">
+        <button class="dock__icon is-active" data-action="launcher">A</button>
+        <button class="dock__icon">S</button>
+        <button class="dock__icon">L</button>
+        <button class="dock__icon">M</button>
+        <button class="dock__icon">C</button>
+      </footer>
+
+      <div class="scrim" data-scrim></div>
+
+      <section class="launcher glass" data-launcher>
+        <div class="launcher__search">
+          <input type="text" placeholder="Search apps, files, settings" />
+          <span class="launcher__key">Cmd + K</span>
+        </div>
+        <div class="launcher__grid">
+          <button class="app-card">
+            <span class="app-card__name">Studio</span>
+            <span class="app-card__meta">Workspace</span>
+          </button>
+          <button class="app-card">
+            <span class="app-card__name">Files</span>
+            <span class="app-card__meta">Recent</span>
+          </button>
+          <button class="app-card">
+            <span class="app-card__name">Settings</span>
+            <span class="app-card__meta">System</span>
+          </button>
+          <button class="app-card">
+            <span class="app-card__name">Terminal</span>
+            <span class="app-card__meta">Developer</span>
+          </button>
+          <button class="app-card">
+            <span class="app-card__name">Music</span>
+            <span class="app-card__meta">Now Playing</span>
+          </button>
+          <button class="app-card">
+            <span class="app-card__name">Store</span>
+            <span class="app-card__meta">Featured</span>
+          </button>
+        </div>
+        <div class="launcher__suggestions">
+          <span class="suggestion">Open focus scene</span>
+          <span class="suggestion">New workspace</span>
+          <span class="suggestion">Settings: Glass depth</span>
+        </div>
+      </section>
+
+      <section class="control-center glass" data-panel>
+        <div class="panel__header">
+          <h3>Control center</h3>
+          <span class="panel__meta">Connected</span>
+        </div>
+        <div class="panel__grid">
+          <button class="toggle is-on">Wi-Fi</button>
+          <button class="toggle is-on">Bluetooth</button>
+          <button class="toggle">Focus</button>
+          <button class="toggle is-on">Night light</button>
+        </div>
+        <div class="panel__sliders">
+          <div class="slider-row">
+            <span>Sound</span>
+            <div class="slider"></div>
+          </div>
+          <div class="slider-row">
+            <span>Brightness</span>
+            <div class="slider"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="notify-panel glass" data-notifications>
+        <div class="panel__header">
+          <h3>Notifications</h3>
+          <span class="panel__meta">Today</span>
+        </div>
+        <div class="notify-item">
+          <div class="notify-title">System update ready</div>
+          <div class="notify-body">A new build is available for AthenaOS.</div>
+        </div>
+        <div class="notify-item">
+          <div class="notify-title">Focus scene saved</div>
+          <div class="notify-body">Your glass depth preset is synced.</div>
+        </div>
+        <div class="notify-item">
+          <div class="notify-title">Build finished</div>
+          <div class="notify-body">GNOME theme assets packaged.</div>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

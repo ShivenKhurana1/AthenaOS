@@ -1,0 +1,8 @@
+firefox
+nautilus
+gnome-system-monitor
+gnome-software
+flatpak
+xdg-desktop-portal
+xdg-desktop-portal-gnome
+fwupd

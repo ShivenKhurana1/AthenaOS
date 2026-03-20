@@ -1,0 +1,8 @@
+@^workstation-product-environment
+filesystem
+bash
+coreutils
+sudo
+systemd
+NetworkManager
+firewalld

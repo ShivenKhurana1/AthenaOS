@@ -1,0 +1,8 @@
+@gnome-desktop
+gnome-shell
+gdm
+gnome-control-center
+gnome-terminal
+gnome-tweaks
+gnome-shell-extension-user-theme
+power-profiles-daemon

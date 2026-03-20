@@ -1,0 +1,15 @@
+[org.gnome.desktop.interface]
+gtk-theme='AthenaOS'
+icon-theme='Adwaita'
+cursor-theme='Adwaita'
+font-name='Space Grotesk 11'
+document-font-name='Newsreader 11'
+monospace-font-name='IBM Plex Mono 11'
+
+[org.gnome.desktop.background]
+picture-uri='file:///usr/share/backgrounds/athenaos/aurora.svg'
+picture-uri-dark='file:///usr/share/backgrounds/athenaos/aurora.svg'
+picture-options='zoom'
+
+[org.gnome.shell.extensions.user-theme]
+name='AthenaOS'

@@ -1,0 +1,7 @@
+{
+  "uuid": "athena-shell@athenaos",
+  "name": "Athena Shell",
+  "description": "AthenaOS shell tweaks and glass panel styling.",
+  "version": 1,
+  "shell-version": ["45", "46"]
+}
