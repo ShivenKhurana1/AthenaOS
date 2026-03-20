@@ -11,4 +11,7 @@ recipe_install() {
   LDFLAGS="-L${LFS_ROOT}/usr/lib" \
   LD_LIBRARY_PATH="${LFS_ROOT}/usr/lib" \
   recipe_configure_make_install "$src_dir" --prefix=/usr --disable-static --with-gmp="${LFS_ROOT}/usr"
+
+  # Remove libtool archive to avoid host-path dependency when linking mpc.
+  rm -f "${LFS_ROOT}/usr/lib/libmpfr.la"
 }
