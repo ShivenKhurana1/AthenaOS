@@ -3,13 +3,20 @@ set -euo pipefail
 
 recipe_find_source() {
   local pattern="$1"
+  local matches=()
   local match
-  match=$(ls -1 "${SOURCES_DIR}/${pattern}" 2>/dev/null | tail -n 1 || true)
-  if [[ -z "$match" ]]; then
+
+  shopt -s nullglob
+  matches=("${SOURCES_DIR}"/${pattern})
+  shopt -u nullglob
+
+  if [[ "${#matches[@]}" -eq 0 ]]; then
     log "Source not found for pattern: ${pattern}"
     log "Add the tarball to ${SOURCES_DIR}."
     exit 1
   fi
+
+  match="${matches[${#matches[@]}-1]}"
   printf '%s\n' "$match"
 }
 
