@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LFS_DIR="$(cd "${SCRIPT_DIR}/../.." && pwd)"
+COMMON_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LFS_DIR="$(cd "${COMMON_DIR}/../.." && pwd)"
 REPO_ROOT="$(cd "${LFS_DIR}/../.." && pwd)"
 
 SOURCES_DIR="${LFS_DIR}/sources"
