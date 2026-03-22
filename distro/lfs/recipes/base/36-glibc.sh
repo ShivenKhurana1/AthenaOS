@@ -13,7 +13,8 @@ recipe_install() {
     --prefix=/usr \
     --disable-werror \
     --enable-kernel=4.14 \
-    --with-headers="${LFS_ROOT}/usr/include"
+    --with-headers="${LFS_ROOT}/usr/include" \
+    --without-selinux
   make -j"$(cpu_count)"
   make DESTDIR="$LFS_ROOT" install
   popd >/dev/null
