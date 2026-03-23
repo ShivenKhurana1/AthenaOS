@@ -33,14 +33,15 @@ if [ -z "\$DBUS_SESSION_BUS_ADDRESS" ]; then
 fi
 
 # Start Openbox window manager
+log "Launching Openbox..."
 openbox-session &
 
-# Open a terminal for the user
-xterm -geometry 80x24+10+10 -ls -title "AthenaOS Dev Console" &
-
-# Hint for the user in the xterm
+# Hint for the user in the log
 echo "AthenaOS Phase 2 Dev Environment"
 echo "To test GNOME Shell extension, run: gnome-shell --nested --wayland"
+
+# Keep the session alive with a foreground terminal
+exec xterm -geometry 120x40+10+10 -ls -title "AthenaOS Dev Console"
 EOF
 chmod +x ~/.vnc/xstartup
 
