@@ -1,5 +1,6 @@
 # name version url checksum
 # checksum supports sha256:<hash> or md5:<hash>. Use '-' to skip verification.
+# GNU tarballs use mirrors.kernel.org (not ftp.gnu.org) for better reachability from CI/Codespaces.
 
 zlib 1.3.1 https://zlib.net/fossils/zlib-1.3.1.tar.gz md5:9855b6d802d7fe5b7bd5b196a2271655
 bzip2 1.0.8 https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz md5:67e051268d0c475ea773822f7500d0e5
@@ -7,23 +8,23 @@ xz 5.8.1 https://github.com/tukaani-project/xz/releases/download/v5.8.1/xz-5.8.1
 zstd 1.5.7 https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz md5:780fc1896922b1bc52a4e90980cdda48
 file 5.46 https://astron.com/pub/file/file-5.46.tar.gz md5:459da2d4b534801e2e2861611d823864
 ncurses 6.5-20250809 https://invisible-mirror.net/archives/ncurses/current/ncurses-6.5-20250809.tgz md5:679987405412f970561cc85e1e6428a2
-bash 5.3 https://ftp.gnu.org/gnu/bash/bash-5.3.tar.gz md5:977c8c0c5ae6309191e7768e28ebc951
-coreutils 9.7 https://ftp.gnu.org/gnu/coreutils/coreutils-9.7.tar.xz md5:6b7285faf7d5eb91592bdd689270d3f1
-grep 3.12 https://ftp.gnu.org/gnu/grep/grep-3.12.tar.xz md5:5d9301ed9d209c4a88c8d3a6fd08b9ac
-sed 4.9 https://ftp.gnu.org/gnu/sed/sed-4.9.tar.xz md5:6aac9b2dbafcd5b7a67a8a9bcb8036c3
-gawk 5.3.2 https://ftp.gnu.org/gnu/gawk/gawk-5.3.2.tar.xz md5:b7014650c5f45e5d4837c31209dc0037
-findutils 4.10.0 https://ftp.gnu.org/gnu/findutils/findutils-4.10.0.tar.xz md5:870cfd71c07d37ebe56f9f4aaf4ad872
-diffutils 3.12 https://ftp.gnu.org/gnu/diffutils/diffutils-3.12.tar.xz md5:d1b18b20868fb561f77861cd90b05de4
-make 4.4.1 https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz md5:c8469a3713cbbe04d955d4ae4be23eeb
-tar 1.35 https://ftp.gnu.org/gnu/tar/tar-1.35.tar.xz md5:a2d8042658cfd8ea939e6d911eaf4152
-patch 2.8 https://ftp.gnu.org/gnu/patch/patch-2.8.tar.xz md5:149327a021d41c8f88d034eab41c039f
+bash 5.3 https://mirrors.kernel.org/gnu/bash/bash-5.3.tar.gz md5:977c8c0c5ae6309191e7768e28ebc951
+coreutils 9.7 https://mirrors.kernel.org/gnu/coreutils/coreutils-9.7.tar.xz md5:6b7285faf7d5eb91592bdd689270d3f1
+grep 3.12 https://mirrors.kernel.org/gnu/grep/grep-3.12.tar.xz md5:5d9301ed9d209c4a88c8d3a6fd08b9ac
+sed 4.9 https://mirrors.kernel.org/gnu/sed/sed-4.9.tar.xz md5:6aac9b2dbafcd5b7a67a8a9bcb8036c3
+gawk 5.3.2 https://mirrors.kernel.org/gnu/gawk/gawk-5.3.2.tar.xz md5:b7014650c5f45e5d4837c31209dc0037
+findutils 4.10.0 https://mirrors.kernel.org/gnu/findutils/findutils-4.10.0.tar.xz md5:870cfd71c07d37ebe56f9f4aaf4ad872
+diffutils 3.12 https://mirrors.kernel.org/gnu/diffutils/diffutils-3.12.tar.xz md5:d1b18b20868fb561f77861cd90b05de4
+make 4.4.1 https://mirrors.kernel.org/gnu/make/make-4.4.1.tar.gz md5:c8469a3713cbbe04d955d4ae4be23eeb
+tar 1.35 https://mirrors.kernel.org/gnu/tar/tar-1.35.tar.xz md5:a2d8042658cfd8ea939e6d911eaf4152
+patch 2.8 https://mirrors.kernel.org/gnu/patch/patch-2.8.tar.xz md5:149327a021d41c8f88d034eab41c039f
 binutils 2.45 https://sourceware.org/pub/binutils/releases/binutils-2.45.tar.xz md5:dee5b4267e0305a99a3c9d6131f45759
-gmp 6.3.0 https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz md5:956dc04e864001a9c22429f761f2c283
-mpfr 4.2.2 https://ftp.gnu.org/gnu/mpfr/mpfr-4.2.2.tar.xz md5:7c32c39b8b6e3ae85f25156228156061
-mpc 1.3.1 https://ftp.gnu.org/gnu/mpc/mpc-1.3.1.tar.gz md5:5c9bc658c9fd0f940e8e3e0f09530c62
-gcc 15.2.0 https://ftp.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz md5:b861b092bf1af683c46a8aa2e689a6fd
+gmp 6.3.0 https://mirrors.kernel.org/gnu/gmp/gmp-6.3.0.tar.xz md5:956dc04e864001a9c22429f761f2c283
+mpfr 4.2.2 https://mirrors.kernel.org/gnu/mpfr/mpfr-4.2.2.tar.xz md5:7c32c39b8b6e3ae85f25156228156061
+mpc 1.3.1 https://mirrors.kernel.org/gnu/mpc/mpc-1.3.1.tar.gz md5:5c9bc658c9fd0f940e8e3e0f09530c62
+gcc 15.2.0 https://mirrors.kernel.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz md5:b861b092bf1af683c46a8aa2e689a6fd
 linux 6.16.1 https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.16.1.tar.xz md5:32d45755e4b39d06e9be58f6817445ee
-glibc 2.42 https://ftp.gnu.org/gnu/glibc/glibc-2.42.tar.xz md5:23c6f5a27932b435cae94e087cb8b1f5
+glibc 2.42 https://mirrors.kernel.org/gnu/glibc/glibc-2.42.tar.xz md5:23c6f5a27932b435cae94e087cb8b1f5
 systemd 257.8 https://github.com/systemd/systemd/archive/v257.8/systemd-257.8.tar.gz md5:25fe5d328e22641254761f1baa74cee0
 dbus 1.16.2 https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz sha256:0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
 util-linux 2.41.1 https://www.kernel.org/pub/linux/utils/util-linux/v2.41/util-linux-2.41.1.tar.xz md5:7e5e68845e2f347cf96f5448165f1764
