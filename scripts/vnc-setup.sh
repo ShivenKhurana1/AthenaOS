@@ -8,10 +8,9 @@ log() {
 }
 
 # 1. Install dependencies
-log "Installing VNC server and minimal desktop environment..."
-# Allow apt update to fail in case of non-critical GPG errors (like Yarn)
+log "Installing VNC server and graphical dependencies..."
 sudo apt update || true
-sudo apt install -y tigervnc-standalone-server gnome-shell gnome-session dbus-x11 x11-xserver-utils --fix-missing
+sudo apt install -y tigervnc-standalone-server gnome-shell gnome-session dbus-x11 x11-xserver-utils openbox xterm --fix-missing
 
 # 2. Setup VNC password (defaulting to 'athenaos' for dev)
 log "Setting up VNC password..."
@@ -25,11 +24,27 @@ cat <<EOF > ~/.vnc/xstartup
 #!/bin/sh
 export XDG_SESSION_TYPE=x11
 export GDK_BACKEND=x11
+export LIBGL_ALWAYS_SOFTWARE=1
 export GNOME_SHELL_SESSION_MODE=user
-dbus-launch --exit-with-session gnome-session
+
+# Ensure a dbus session is available
+if [ -z "\$DBUS_SESSION_BUS_ADDRESS" ]; then
+    eval \$(dbus-launch --sh-syntax)
+fi
+
+# Start Openbox window manager
+openbox-session &
+
+# Open a terminal for the user
+xterm -geometry 80x24+10+10 -ls -title "AthenaOS Dev Console" &
+
+# Hint for the user in the xterm
+echo "AthenaOS Phase 2 Dev Environment"
+echo "To test GNOME Shell extension, run: gnome-shell --nested --wayland"
 EOF
 chmod +x ~/.vnc/xstartup
 
 log "VNC setup complete!"
+log "Kill any old sessions: vncserver -kill :1 || true"
 log "Start server with: vncserver :1 -geometry 1280x720"
-log "Forward port 5901 in Codespaces 'Ports' tab and connect via VNC client."
+log "Forward port 5901 in Codespaces 'Ports' tab and connect via VNC client with password 'athenaos'."
