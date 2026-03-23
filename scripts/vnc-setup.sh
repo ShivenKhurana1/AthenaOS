@@ -9,8 +9,9 @@ log() {
 
 # 1. Install dependencies
 log "Installing VNC server and minimal desktop environment..."
-sudo apt update
-sudo apt install -y tigervnc-standalone-server gnome-shell gnome-session dbus-x11 x11-xserver-utils
+# Allow apt update to fail in case of non-critical GPG errors (like Yarn)
+sudo apt update || true
+sudo apt install -y tigervnc-standalone-server gnome-shell gnome-session dbus-x11 x11-xserver-utils --fix-missing
 
 # 2. Setup VNC password (defaulting to 'athenaos' for dev)
 log "Setting up VNC password..."
