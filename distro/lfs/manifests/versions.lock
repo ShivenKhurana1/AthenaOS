@@ -30,6 +30,8 @@ util-linux 2.41.1 https://www.kernel.org/pub/linux/utils/util-linux/v2.41/util-l
 shadow 4.18.0 https://github.com/shadow-maint/shadow/releases/download/4.18.0/shadow-4.18.0.tar.xz md5:30ef46f54363db1d624587be68794ef2
 sudo 1.9.17p2 https://www.sudo.ws/dist/sudo-1.9.17p2.tar.gz sha256:4a38a1ab3adb1199257edc2a7c4a2bd714665eb605b04368843b06dada2cfcfb
 kmod 34.2 https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-34.2.tar.xz md5:36f2cc483745e81ede3406fa55e1065a
+libndp 1.9 http://libndp.org/files/libndp-1.9.tar.gz md5:9d486750569e7025e5d0afdcc509b93c
+libnl 3.11.0 https://github.com/thom311/libnl/releases/download/libnl3_11_0/libnl-3.11.0.tar.gz md5:0a5eb82b494c411931a47638cb0dba51
 NetworkManager 1.54.0 https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/releases/1.54.0/downloads/NetworkManager-1.54.0.tar.xz sha256:6c104c8e0bd5a3bbbb9ce28b7670e72924e058fa9303e90dab2815d70a530879
 chrony 4.6.1 https://chrony.tuxfamily.org/releases/chrony-4.6.1.tar.gz sha256:571ff73fbf0ae3097f0604eca2e00b1d8bb2e91affe1a3494785ff21d6199c5c
 polkit 126 https://github.com/polkit-org/polkit/archive/126/polkit-126.tar.gz sha256:2814a7281989f6baa9e57bd33bbc5e148827e2721ccef22aaf28ab2b376068e8

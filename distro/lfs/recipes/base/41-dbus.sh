@@ -16,7 +16,6 @@ recipe_install() {
     --prefix=/usr \
     --sysconfdir=/etc \
     --localstatedir=/var \
-    -Dtests=false \
     "$src_dir"
 
   ninja

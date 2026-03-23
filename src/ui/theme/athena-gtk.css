@@ -1,0 +1,28 @@
+/* src/ui/theme/athena-gtk.css */
+/* AthenaOS Glasskit Theme - GTK4/Libadwaita */
+
+@import url("resource:///org/gnome/adwaita/gtk-4.0.css");
+
+:root {
+  --athena-glass-bg: rgba(255, 255, 255, 0.75);
+  --athena-glass-border: rgba(255, 255, 255, 0.62);
+  --athena-glass-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+window {
+  background-color: var(--athena-glass-bg);
+  border: 1px solid var(--athena-glass-border);
+  border-radius: 20px;
+  box-shadow: var(--athena-glass-shadow);
+}
+
+headerbar {
+  background: transparent;
+  border-bottom: 1px solid var(--athena-glass-border);
+  padding: 10px;
+}
+
+headerbar label {
+  font-weight: 600;
+  color: #101218;
+}

@@ -1,0 +1,13 @@
+.athena-panel {
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  margin: 8px 14px;
+  padding: 4px 12px;
+  box-shadow: 0 8px 32px rgba(16, 18, 24, 0.15);
+  transition-duration: 250ms;
+}
+
+.athena-panel:overview {
+  background-color: rgba(255, 255, 255, 0.85);
+}

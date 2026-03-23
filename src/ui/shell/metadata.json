@@ -1,0 +1,8 @@
+{
+  "uuid": "athena-shell@athenaos.org",
+  "name": "Athena Glasskit Shell",
+  "description": "Modern glasskit interface for AthenaOS",
+  "version": 1,
+  "shell-version": ["42", "43", "44", "45", "46", "47"],
+  "url": "https://github.com/AthenaOS/AthenaOS"
+}
